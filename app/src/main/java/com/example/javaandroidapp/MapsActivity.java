@@ -91,8 +91,10 @@ public class MapsActivity extends AppCompatActivity
         }
     }
 
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+            
                                            @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == LOCATION_PERMISSION_REQUEST) {
@@ -131,6 +133,7 @@ public class MapsActivity extends AppCompatActivity
         mMap.addMarker(new MarkerOptions().position(latLng).title(location));
         mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
         Toast.makeText(getApplicationContext(),
+                
                 address.getLatitude() + " " + address.getLongitude(), Toast.LENGTH_LONG).show();
     }
 
